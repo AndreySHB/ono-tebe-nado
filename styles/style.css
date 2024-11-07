@@ -48,7 +48,7 @@
     width: 100%;
     height: 757px;
     margin-top: 96px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/cover.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/cover.jpg");
     background-size: cover;
 }
 
@@ -133,16 +133,16 @@
 }
 
 .lots__card-list-item_1 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/card-lot-01.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-01.jpg");
 }
 
 .lots__card-list-item_2 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/card-lot-02.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-02.jpg");
 
 }
 
 .lots__card-list-item_3 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("/images/card-lot-03.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-03.jpg");
 }
 
 .lot_title {
@@ -237,7 +237,7 @@
     font-size: 18px;
     line-height: 24px;
     text-decoration: underline;
-    text-underline-position: under;
+    text-underline-offset: 4px;
 }
 
 .footer_links-list {
