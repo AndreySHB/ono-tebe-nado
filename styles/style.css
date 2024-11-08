@@ -1,5 +1,4 @@
 .header {
-    position: relative;
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     width: 1052px;
@@ -20,39 +19,56 @@
     margin-top: 45px;
 }
 
-.header_menu_links-list-item:not(.header_menu_links-list-item_no-bullit) {
+.header_menu_links-list-item_active {
     text-decoration: underline;
-    text-underline-position: under;
+    text-underline-offset: 4px;
     list-style: circle;
 }
 
+.header_logo {
+    display: block;
+}
+
 .header_logo-image {
-    position: absolute;
-    left: 50%;
-    width: 50%;
     max-width: 148px;
     max-height: 105px;
-    transform: translateX(-50%);
+}
+
+.address {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.address_link {
+    display: block;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .address_header {
     margin-top: 5px;
     margin-left: 35px;
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration: underline;
-    text-underline-position: under;
 }
 
 .cover {
+    position: relative;
+    z-index: -2;
     width: 100%;
-    height: 757px;
+    min-height: 757px;
     margin-top: 96px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/cover.jpg");
+    background-image: url("../images/cover.jpg");
     background-size: cover;
 }
 
-.cover h1 {
+.overlay {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cover_title {
     padding-top: 167px;
     padding-left: 50px;
     color: white;
@@ -80,17 +96,15 @@
     margin-top: 140px;
     margin-left: 78px;
     color: white;
+    font-weight: 400;
     font-size: 22px;
     text-transform: uppercase;
-}
-
-.cover_subline span {
-    letter-spacing: 24px;
+    word-spacing: 20px;
 }
 
 .bet_button {
     display: inline-block;
-    margin-left: 75px;
+    margin-left: 70px;
     border: 1px solid white;
     padding: 10px 31px;
     color: white;
@@ -125,6 +139,7 @@
 
 .lots__card-list-item {
     position: relative;
+    z-index: -2;
     width: 334px;
     height: 563px;
     background-repeat: no-repeat;
@@ -133,16 +148,16 @@
 }
 
 .lots__card-list-item_1 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-01.jpg");
+    background-image: url("../images/card-lot-01.jpg");
 }
 
 .lots__card-list-item_2 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-02.jpg");
+    background-image: url("../images/card-lot-02.jpg");
 
 }
 
 .lots__card-list-item_3 {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../images/card-lot-03.jpg");
+    background-image: url("../images/card-lot-03.jpg");
 }
 
 .lot_title {
@@ -154,11 +169,12 @@
     line-height: 26px;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    text-underline-offset: 2px;
+    text-underline-offset: 4px;
     text-transform: uppercase;
 }
 
 .lot_content {
+    /* объясните пожалуйста чем плох абслолют, почему я не могу его испозовать, непонятно */
     position: absolute;
     bottom: 0;
     margin-right: 40px;
@@ -169,12 +185,13 @@
 }
 
 .look_more {
+    display: block;
     margin-top: 30px;
     margin-left: 40px;
     font-size: 20px;
     line-height: 23px;
     text-decoration: underline;
-    text-underline-position: under;
+    text-underline-offset: 6px;
 }
 
 
@@ -184,7 +201,7 @@
     grid-template-rows: repeat(2, 1fr);
     row-gap: 10px;
     column-gap: 25px;
-    margin-top: 158px;
+    margin-top: 110px;
     margin-right: 24px;
     margin-left: 24px;
 }
@@ -194,9 +211,9 @@
     width: 240px;
     height: 240px;
     margin: auto;
+    margin-bottom: 0;
     border-radius: 50%;
     background-color: black;
-
 }
 
 .about_logo-image {
@@ -208,7 +225,7 @@
 }
 
 .about_title {
-    margin-top: 125px;
+    margin-top: 172px;
     font-weight: bold;
     font-size: 40px;
     line-height: 47px;
@@ -216,7 +233,6 @@
 }
 
 .about_description {
-    margin-top: -24px;
     font-size: 20px;
     line-height: 24px;
 }
@@ -226,7 +242,6 @@
 }
 
 .footer {
-    position: relative;
     display: flex;
     justify-content: space-between;
     margin: 182px 50px 88px;
@@ -234,39 +249,34 @@
 
 .address_footer {
     margin-left: 0;
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
 }
 
-.footer_links-list {
-    position: absolute;
-    left: 50%;
+.footer_menu_links-list {
     display: block;
+    margin-left: 40px;
     font-size: 18px;
     line-height: 21px;
-    transform: translate(-50%, 0%);
 }
 
-.footer_links-list-item {
+.footer_menu_links-list-item {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
-.footer_links-list-item:not(.footer_links-list-item_no-bullit) {
+.footer_menu_links-list-item_active {
     text-decoration: underline;
-    text-underline-position: under;
+    text-underline-offset: 4px;
 }
 
-.footer_icons {
+.footer_icon_links {
     display: flex;
     justify-content: space-between;
     gap: 48px;
+    list-style: none;
 }
 
-.footer_icons img {
+.footer_icon_links img {
     max-width: 48px;
     max-height: 48px;
 }
