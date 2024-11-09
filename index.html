@@ -14,16 +14,13 @@
       <nav>
         <ul class="header_menu_links-list">
           <li class="header_menu_links-list-item">
-            <a href="#main_page">главная</a>
+            <!-- почему именно первая ссылка "активная", на мой взгяд они все активные -->
+            <a class="header_menu_active_link" href="#main_page">главная</a>
           </li>
-          <li
-            class="header_menu_links-list-item header_menu_links-list-item_active"
-          >
+          <li class="header_menu_links-list-item">
             <a href="#lots_page">посмотреть лоты</a>
           </li>
-          <li
-            class="header_menu_links-list-item header_menu_links-list-item_active"
-          >
+          <li class="header_menu_links-list-item">
             <a href="#about_page">об аукционе</a>
           </li>
         </ul>
@@ -48,51 +45,76 @@
       <section class="cover">
         <div class="overlay"></div>
         <h1 class="cover_title">
-          о<span class="extended_letter_space">но</span><br />
-          <span class="cover_title_line_2">те</span
-          ><span class="extended_letter_space">бе</span><br />
-          <span class="extended_letter_space cover_title_line_3">н</span>адо
+          <span>о<span class="extended_letter_space">но</span></span>
+          <span class="cover_title_line_2">
+            <span>те</span><span class="extended_letter_space">бе</span>
+          </span>
+          <span class="cover_title_line_3">
+            <span class="extended_letter_space">н</span>ад<span
+              class="no_letter_space"
+              >о</span
+            >
+          </span>
         </h1>
-        <!-- поскольку было указание убрать span, то возникло несоответствие шаблону, которое не может быть исправлено свойством word-spacing, поскольку расстояние между словами не одинаковое-->
+        <!-- поскольку было указание убрать span, то возникло несоответствие шаблону, которое не может быть исправлено свойством word-spacing,
+          поскольку расстояние между словами не одинаковое, кнопка справа из-за этого также страдает-->
         <h2 class="cover_subline">аукцион вещей, в которые никто не верил</h2>
         <button class="bet_button">сделать ставку</button>
       </section>
       <section class="lots" id="lots_page">
-        <h3 class="lots_title">лоты</h3>
+        <h2 class="lots_title">лоты</h2>
         <ul class="lots_card-list">
           <li class="lots__card-list-item lots__card-list-item_1">
-            <!-- сомнительное решение коенчно, ну ладно -->
-            <div class="overlay"></div>
-            <h3 class="lot_title">фильм режиссёра, который бросил киношколу</h3>
-            <p class="lot_content">
-              Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
-              ставка, если бы вы не знали, что режиссёр — Пол Томас Андерсон?
-            </p>
+            <a>
+              <div class="overlay space_between_container">
+                <h3 class="lot_title">
+                  фильм режиссёра, который бросил киношколу
+                </h3>
+                <div class="lot_content">
+                  <p>
+                    Не просто бросил, а ушёл с первой лекции. Какой была бы ваша
+                    ставка, если бы вы не знали, что режиссёр — Пол Томас
+                    Андерсон?
+                  </p>
+                </div>
+              </div>
+            </a>
           </li>
           <li class="lots__card-list-item lots__card-list-item_2">
-            <div class="overlay"></div>
-            <h3 class="lot_title">
-              Книга, где описан один скучный день из жизни рекламного агента
-            </h3>
-            <p class="lot_content">
-              Объёмом почти в тысячу страниц. Иногда без знаков препинания и с
-              переходами на древнеанглийский. В ней одновременно рассказывается
-              о 16 июня 1904 года и об истории литературы, начиная с античных
-              времён. И это всё накладывается на эпическую поэму Гомера. Сколько
-              бы вы поставили на «Улисса» Джеймса Джойса?
-            </p>
+            <a>
+              <div class="overlay space_between_container">
+                <h3 class="lot_title">
+                  Книга, где описан один скучный день из жизни рекламного агента
+                </h3>
+                <div class="lot_content">
+                  <p>
+                    Объёмом почти в тысячу страниц. Иногда без знаков препинания
+                    и с переходами на древнеанглийский. В ней одновременно
+                    рассказывается о 16 июня 1904 года и об истории литературы,
+                    начиная с античных времён. И это всё накладывается на
+                    эпическую поэму Гомера. Сколько бы вы поставили на «Улисса»
+                    Джеймса Джойса?
+                  </p>
+                </div>
+              </div>
+            </a>
           </li>
           <li class="lots__card-list-item lots__card-list-item_3">
-            <div class="overlay"></div>
-            <h3 class="lot_title">
-              Картина, которую повторит даже 5-летний сын маминой подруги
-            </h3>
-            <p class="lot_content">
-              Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то
-              похожее на инфузорию-туфельку. Никаких полей, лесов, котиков...
-              Сколько бы вы на такое поставили, если бы не знали, что это — одна
-              из революционных работ Кандинского?
-            </p>
+            <a>
+              <div class="overlay space_between_container">
+                <h3 class="lot_title">
+                  Картина, которую повторит даже 5-летний сын маминой подруги
+                </h3>
+                <div class="lot_content">
+                  <p>
+                    Ну действительно, там линия, тут кружочек, а здесь и вовсе
+                    что-то похожее на инфузорию-туфельку. Никаких полей, лесов,
+                    котиков... Сколько бы вы на такое поставили, если бы не
+                    знали, что это — одна из революционных работ Кандинского?
+                  </p>
+                </div>
+              </div></a
+            >
           </li>
         </ul>
         <a class="look_more">посмотреть больше</a>
@@ -105,9 +127,7 @@
             alt="белый логотип"
           />
         </div>
-        <h1 class="about_title">об аукционе</h1>
-        <!-- пустой элемент для пропуска ячейки сетки, мы же используем пустой div для лейаута -->
-        <div class="emty_grid_cell"></div>
+        <h2 class="about_title">об аукционе</h2>
         <div class="about_description">
           <p>
             Здесь вы не встретите очередное пафосное собрание невероятно
@@ -139,16 +159,12 @@
       <nav>
         <ul class="footer_menu_links-list">
           <li class="footer_menu_links-list-item">
-            <a href="#main_page">главная</a>
+            <a class="footer_menu_active_link" href="#main_page">главная</a>
           </li>
-          <li
-            class="footer_menu_links-list-item footer_menu_links-list-item_active"
-          >
+          <li class="footer_menu_links-list-item">
             <a href="#lots_page">посмотреть лоты</a>
           </li>
-          <li
-            class="footer_menu_links-list-item footer_menu_links-list-item_active"
-          >
+          <li class="footer_menu_links-list-item">
             <a href="#about_page">об аукционе</a>
           </li>
         </ul>
